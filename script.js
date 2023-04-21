@@ -30,8 +30,8 @@ let promise3 = new Promise((resolve,reject)=>{
     },time*1000);
 })
 
-Promise.all([promise1,promise2,promise3]).then((values)=>{
-   Document.getElementById('second').innerText=values[0];
+Promise.all([promise1,promise2,promise3]).then(([a,b,c])=>{
+   Document.getElementById('loading').innerText=a;
 	
 }).catch((error)=>{
     console.log(error);
