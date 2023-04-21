@@ -31,7 +31,10 @@ let promise3 = new Promise((resolve,reject)=>{
 })
 
 Promise.all([promise1,promise2,promise3]).then(([a,b,c])=>{
-   Document.getElementById('loading').innerText=a;
+    document.getElementById('loading1').innerText = a.time;
+	document.getElementById('loading2').innerText = b.time;
+	document.getElementById('loading3').innerText = c.time;
+   document.getElementById('result').innerText = a.time+b.time+c.time;
 	
 }).catch((error)=>{
     console.log(error);
